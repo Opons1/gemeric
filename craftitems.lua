@@ -177,7 +177,7 @@ minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = modname..":ore_"..number,
 	wherein        = "default:stone",
-	clust_scarcity = 100000,
+	clust_scarcity = 90000,
 	clust_num_ores = 5,
 	clust_size     = 2,
 	y_min          = -3000,
