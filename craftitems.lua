@@ -53,7 +53,7 @@ local nl1 = gemeric.gem_name_list[number]
 local nl5 = gemeric.gem_stats_list_durability[number]
 local nl10 = gemeric.gem_stats_list_speed[number]
 minetest.register_craftitem(modname..":gem_"..number, {
-	description = nl1.." Gem\nTool Durability +"..nl5.."\nTool Mining Speed +"..math.round(nl10*1.2,0.0001),
+	description = nl1.." Gem",
 	inventory_image = "gem"..number..".png",
 	groups = {gem = 1},
 })
@@ -109,7 +109,7 @@ minetest.register_craft({
     }
 })
 minetest.register_craftitem(modname..":super_gem_"..number, {
-	description = "Supercharged "..nl1.." Gem\nTool Durability +"..math.round(nl5*1.2,0.0001).."\nTool Mining Speed +"..math.round(nl10/1.2,0.0001),
+	description = "Supercharged "..nl1.." Gem",
 	inventory_image = "gem_super_outline.png^gem"..number..".png",
 	groups = {super_gem = 1},
 })

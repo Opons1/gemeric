@@ -204,7 +204,7 @@ local nl2 = gemeric.gem_name_list[number2]
 local nl5 = gemeric.gem_stats_list_durability[number2]
 local nl8 = gemeric.gem_stats_list_speed[number2]
 register_hoe2(modname..":"..nl4.."_hoe_"..number2, {
-	description = nl2.." Hoe\n"..nl3.."\nDurability "..math.round(nl5+nl6),
+	description = nl2.." Hoe\n"..nl3,
 	inventory_image = nl4..".png^hoe"..number2..".png",
 	max_uses = math.round(nl5+nl6),
 	groups = {gem_hoe = 1},
@@ -226,7 +226,7 @@ minetest.register_craft({
     }
 })
 register_hoe2(modname..":"..nl4.."_hoe_supercharged_"..number2, {
-	description = nl2.." Hoe\n"..nl3.."\nSupercharged\nDurability "..math.round((nl5*1.2)+nl6),
+	description = nl2.." Hoe\n"..nl3.."\nSupercharged",
 	inventory_image = nl4..".png^hoe"..number2..".png^hoe_supercharged.png",
 	max_uses = math.round((nl5*1.2)+nl6),
 	groups = {gem_hoe = 1},
@@ -255,7 +255,7 @@ minetest.register_craft({
 
 --shovel
 minetest.register_tool(modname..":"..nl4.."_shovel_"..number2, {
-	description = nl2.." Shovel\n"..nl3.."\nDurability "..math.round(nl5+nl6).."\nMining Speed "..math.round((nl8*1.2)/nl9,0.0001),
+	description = nl2.." Shovel\n"..nl3,
 	inventory_image = nl7..".png^shovel"..number2..".png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -277,7 +277,7 @@ minetest.register_craft({
     }
 })
 minetest.register_tool(modname..":"..nl4.."_shovel_supercharged_"..number2, {
-	description = nl2.." Shovel\n"..nl3.."\nSupercharged\nDurability "..math.round((nl5*1.2)+nl6).."\nMining Speed "..math.round((nl8/1.2)/nl9,0.0001),
+	description = nl2.." Shovel\n"..nl3.."\nSupercharged",
 	inventory_image = nl7..".png^shovel"..number2..".png^shovel_supercharged.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -305,7 +305,7 @@ minetest.register_craft({
 --pickaxe
 
 minetest.register_tool(modname..":"..nl4.."_pickaxe_"..number2, {
-	description = nl2.." Pickaxe\n"..nl3.."\nDurability "..math.round(nl5+nl6).."\nMining Speed "..math.round((nl8*1.2)/nl9,0.0001),
+	description = nl2.." Pickaxe\n"..nl3,
 	inventory_image = nl4..".png^pickaxe"..number2..".png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -327,7 +327,7 @@ minetest.register_craft({
     }
 })
 minetest.register_tool(modname..":"..nl4.."_pickaxe_supercharged_"..number2, {
-	description = nl2.." Pickaxe\n"..nl3.."\nSupercharged\nDurability "..math.round((nl5*1.2)+nl6).."\nMining Speed "..math.round((nl8/1.2)/nl9,0.0001),
+	description = nl2.." Pickaxe\n"..nl3.."\nSupercharged",
 	inventory_image = nl4..".png^pickaxe"..number2..".png^pickaxe_supercharged.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -355,7 +355,7 @@ minetest.register_craft({
 
 --axe
 minetest.register_tool(modname..":"..nl4.."_axe_"..number2, {
-	description = nl2.." Axe\n"..nl3.."\nDurability "..math.round(nl5+nl6).."\nMining Speed "..math.round((nl8*1.2)/nl9,0.0001),
+	description = nl2.." Axe\n"..nl3,
 	inventory_image = nl4..".png^axe"..number2..".png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -377,7 +377,7 @@ minetest.register_craft({
     }
 })
 minetest.register_tool(modname..":"..nl4.."_axe_supercharged_"..number2, {
-	description = nl2.." Axe\n"..nl3.."\nSupercharged\nDurability "..math.round((nl5*1.2)+nl6).."\nMining Speed "..math.round((nl8/1.2)/nl9,0.0001),
+	description = nl2.." Axe\n"..nl3.."\nSupercharged",
 	inventory_image = nl4..".png^axe"..number2..".png^axe_supercharged.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -416,7 +416,7 @@ minetest.register_craft({
     }
 })
 minetest.register_tool(modname..":"..nl4.."_paxel_"..number2, {
-	description = nl2.." Paxel\n"..nl3.."\nDurability "..math.round(nl5+nl6).."\nMining Speed "..math.round((nl8*1.2)/nl9,0.0001),
+	description = nl2.." Paxel\n"..nl3,
 	inventory_image = nl4..".png^paxel"..number2..".png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -440,7 +440,7 @@ minetest.register_craft({
     }
 })
 minetest.register_tool(modname..":"..nl4.."_paxel_supercharged_"..number2, {
-	description = "Supercharged "..nl2.." Paxel\n"..nl3.."\nDurability "..math.round((nl5*1.2)+nl6).."\nMining Speed "..math.round(nl8/nl9,0.0001),
+	description = "Supercharged "..nl2.." Paxel\n"..nl3,
 	inventory_image = nl4..".png^paxel"..number2..".png^paxel_supercharged.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -460,7 +460,7 @@ minetest.register_tool(modname..":"..nl4.."_paxel_supercharged_"..number2, {
 	end
 	})
 	minetest.register_tool(modname..":"..nl4.."_paxel_supercharged_active_"..number2, {
-	description = "Activated Supercharged "..nl2.." Paxel\n"..nl3.."\nDurability "..math.round((nl5*1.2)+nl6).."\nMining Speed "..math.round((nl8/1.5)/nl9,0.0001),
+	description = "Activated Supercharged "..nl2.." Paxel\n"..nl3,
 	inventory_image = nl4..".png^paxel"..number2..".png^paxel_supercharged_activated.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -483,7 +483,7 @@ minetest.register_tool(modname..":"..nl4.."_paxel_supercharged_"..number2, {
 
 --lumber axe
 minetest.register_tool(modname..":"..nl4.."_lumberaxe_"..number2, {
-	description = nl2.." Lumber Axe\n"..nl3.."\nDurability "..math.round(nl5+nl6).."\nMining Speed "..math.round((nl8*1.2)/nl9,0.0001),
+	description = nl2.." Lumber Axe\n"..nl3,
 	inventory_image = nl4..".png^tomahawk"..number2..".png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -513,7 +513,7 @@ minetest.register_craft({
     }
 })
 minetest.register_tool(modname..":"..nl4.."_lumberaxe_supercharged_"..number2, {
-	description = nl2.." Lumber Axe\n"..nl3.."\nSupercharged\nDurability "..math.round((nl5*1.2)+nl6).."\nMining Speed "..math.round((nl8/1.2)/nl9,0.0001),
+	description = nl2.." Lumber Axe\n"..nl3.."\nSupercharged",
 	inventory_image = nl4..".png^tomahawk"..number2..".png^tomahawk_supercharged.png",
 	tool_capabilities = {
 		full_punch_interval = 1.0,
@@ -544,7 +544,7 @@ minetest.register_tool(modname..":"..nl4.."_lumberaxe_supercharged_"..number2, {
 
 --AOE--area of effect
 register_hoe3(modname..":"..nl4.."_hoe_"..number2.."_aoe", {
-	description = nl2.." Hoe\n"..nl3.."\nDurability "..math.round(nl5+nl6).."\n3x3 AOE",
+	description = nl2.." Hoe\n"..nl3.."\n3x3 AOE",
 	inventory_image = nl4..".png^hoe"..number2..".png",
 	max_uses = math.round(nl5+nl6),
 	groups = {gem_hoe = 1},
@@ -556,7 +556,7 @@ minetest.register_craft({
     }
 })
 register_hoe3(modname..":"..nl4.."_hoe_supercharged_"..number2.."_aoe", {
-	description = nl2.." Hoe\n"..nl3.."\nSupercharged\nDurability "..math.round((nl5*1.2)+nl6).."\n3x3 AOE",
+	description = nl2.." Hoe\n"..nl3.."\nSupercharged\n3x3 AOE",
 	inventory_image = nl4..".png^hoe"..number2..".png^hoe_supercharged.png",
 	max_uses = math.round((nl5*1.2)+nl6),
 	groups = {gem_hoe = 1},
