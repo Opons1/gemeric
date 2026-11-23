@@ -246,7 +246,7 @@ minetest.register_node(modname..":chaos_essence_ore", {
 	groups = {cracky = 2},
 	light_source = 3,
 	paramtype = "light",
-	drop = modname..":chaos_essence 2",
+	drop = modname..":chaos_essence",
 	sounds = default.node_sound_stone_defaults(),
 })
 minetest.register_ore({
@@ -254,7 +254,7 @@ minetest.register_ore({
 	ore            = modname..":chaos_essence_ore",
 	wherein        = "default:stone",
 	clust_scarcity = 16 * 16 * 16,
-	clust_num_ores = 3,
+	clust_num_ores = 7,
 	clust_size     = 3,
 	y_min          = -1000,
 	y_max          = 250,
@@ -264,7 +264,7 @@ minetest.register_ore({
 	ore            = modname..":chaos_essence_ore",
 	wherein        = "default:stone",
 	clust_scarcity = 16 * 16 * 16,
-	clust_num_ores = 3,
+	clust_num_ores = 7,
 	clust_size     = 3,
 	y_min          = 3000,
 	y_max          = 6000,
