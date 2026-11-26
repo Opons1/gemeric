@@ -203,3 +203,6 @@ gemeric.rune_name_list = {
 local path = minetest.get_modpath("gemeric")
 dofile(path.."/craftitems.lua")
 dofile(path.."/basic_tool_registration.lua")
+if core.get_modpath("birthstones") then
+    dofile(path.. "/birthstones.lua")
+end
