@@ -1,5 +1,5 @@
 local modname = "gemeric"
-
+--makes the ore texture using existing ore textures as a reference
 local function generate_ore_texture(num)
 	local usableoretextures = {
 		"default_mineral_coal.png",
@@ -21,7 +21,7 @@ local function generate_ore_texture(num)
 
 	return "default_stone.png^(" .. tint .. "^[mask:" .. usedtext .. ")"
 end
-
+--makes the berry texture using existing textures as a reference
 local function generate_berry_texture(num)
 	local usableberrytextures = {
 		"gemeric_berry_1.png",
@@ -41,13 +41,6 @@ local function generate_berry_texture(num)
 	return "(" .. tint .. "^[mask:" .. usedtext .. ")"
 end
 
-function math.sign(v)
-	return (v >= 0 and 1) or -1
-end
-function math.round(v, bracket)
-	bracket = bracket or 1
-	return math.floor(v/bracket + math.sign(v) * 0.5) * bracket
-end
 for number = 1, 48 do
 local nl1 = gemeric.gem_name_list[number]
 local nl5 = gemeric.gem_stats_list_durability[number]

@@ -31,13 +31,14 @@ core.handle_node_drops = function(pos, drops, digger)
     return old_handle_node_drops(pos, drops, digger)
 end
 
-
 local function alexandrite(toolname)
     local def = core.registered_tools[toolname]
 
     if not def then
         return
     end
+
+    def.groups.not_in_creative_inventory = 1
 
     def = table.copy(def)
 
@@ -203,6 +204,10 @@ local function amethyst(toolname)
 	end
 
 	def = table.copy(def)
+
+    def.light_source = 14
+
+    def.groups.not_in_creative_inventory = 1
 
 	def.on_place = function(itemstack, placer, pointed_thing)
 		return place_phantom_light(itemstack, placer, pointed_thing)
