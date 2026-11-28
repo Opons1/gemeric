@@ -32,15 +32,14 @@ core.handle_node_drops = function(pos, drops, digger)
 end
 
 local function alexandrite(toolname)
-    local def = core.registered_tools[toolname]
+    local def = table.copy(core.registered_tools[toolname])
 
     if not def then
         return
     end
+	def.groups = def.groups or {}
 
     def.groups.not_in_creative_inventory = 1
-
-    def = table.copy(def)
 
     def.on_place = function(itemstack, placer, pointed_thing)
         if not placer or not placer:is_player() or pointed_thing.type ~= "node" then
@@ -198,7 +197,7 @@ end
 
 
 local function amethyst(toolname)
-	local def = core.registered_tools[toolname]
+	local def = table.copy(core.registered_tools[toolname])
 	if not def then
 		return
 	end
@@ -206,7 +205,8 @@ local function amethyst(toolname)
 	def = table.copy(def)
 
     def.light_source = 14
-
+	
+	def.groups = def.groups or {}
     def.groups.not_in_creative_inventory = 1
 
 	def.on_place = function(itemstack, placer, pointed_thing)
